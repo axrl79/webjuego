@@ -1,42 +1,99 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .animate-road-movement {
+    animation: roadMovement 8s linear infinite;
+  }
+
+  .animate-float-slow {
+    animation: floatSlow 8s ease-in-out infinite;
+  }
+
+  .animate-lightning {
+    animation: lightning 10s ease-in-out infinite;
+  }
+
+  .slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ce1126;
+    cursor: pointer;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ce1126;
+    cursor: pointer;
+    border: none;
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+@keyframes sinisterGlow {
+  from {
+    text-shadow: 0 0 30px rgba(139, 0, 0, 0.8);
+  }
+  to {
+    text-shadow: 0 0 50px rgba(139, 0, 0, 1), 0 0 70px rgba(80, 0, 0, 0.5);
+  }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@keyframes abyssGlow {
+  from {
+    text-shadow: 0 0 20px rgba(139, 0, 0, 0.6);
+  }
+  to {
+    text-shadow: 0 0 40px rgba(139, 0, 0, 0.9), 0 0 60px rgba(50, 0, 0, 0.4);
+  }
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@keyframes sinisterButton {
+  from {
+    box-shadow: 0 0 40px rgba(139, 0, 0, 0.6);
+  }
+  to {
+    box-shadow: 0 0 60px rgba(139, 0, 0, 0.9), 0 0 80px rgba(80, 0, 0, 0.4);
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@keyframes roadMovement {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(100px);
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(0px);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-15px);
+    opacity: 0.8;
+  }
+}
+
+@keyframes lightning {
+  0%,
+  30%,
+  100% {
+    opacity: 0;
+  }
+  31%,
+  34% {
+    opacity: 0.3;
+  }
+  32%,
+  33% {
+    opacity: 0.8;
   }
 }
