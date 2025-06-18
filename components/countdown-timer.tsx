@@ -13,7 +13,7 @@ export function CountdownTimer() {
   useEffect(() => {
     // Fecha de lanzamiento (ejemplo: 30 días desde ahora)
     const launchDate = new Date()
-    launchDate.setDate(launchDate.getDate() + 30)
+    launchDate.setDate(launchDate.getDate() + 10)
 
     const timer = setInterval(() => {
       const now = new Date().getTime()
