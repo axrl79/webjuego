@@ -36,7 +36,8 @@ export function AudioPlayer() {
 
   return (
     <div className="fixed bottom-4 right-4 z-50 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-red-900/50">
-      <audio ref={audioRef} src="/public/savia.mp3" />
+      <audio ref={audioRef} src="/savia.mp3" />
+
 
       <div className="flex items-center gap-3">
         <button onClick={togglePlay} className="p-2 rounded-full bg-bolivia-red hover:bg-red-700 transition-colors">

@@ -47,7 +47,7 @@ export function WarningModal({ isVisible }: WarningModalProps) {
       setShowContent(false)
       setParticles([])
     }
-  }, [isVisible])
+  }, [isVisible, dangerTexts.length])
 
   if (!isVisible) return null
 

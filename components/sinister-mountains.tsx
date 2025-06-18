@@ -5,7 +5,7 @@ import * as THREE from "three"
 
 export function SinisterMountains() {
   const groupRef = useRef<THREE.Group>(null!)
-  const fogRef = useRef<THREE.Mesh>(null!)
+  // const fogRef = useRef<THREE.Mesh>(null!)
   const lightningRef = useRef<THREE.PointLight>(null!)
   const pathLightsRef = useRef<THREE.Group>(null!)
   const mistRef = useRef<THREE.Group>(null!)
