@@ -13,7 +13,7 @@ export function CountdownTimer() {
   useEffect(() => {
   // Crear una nueva fecha con la hora objetivo (21:20) exactamente en 10 días
   const launchDate = new Date();
-  launchDate.setDate(launchDate.getDate() + 10);
+  launchDate.setDate(launchDate.getDate() + 0);
   launchDate.setHours(21); // 21 horas = 9 PM
   launchDate.setMinutes(20); // 20 minutos
   launchDate.setSeconds(0);
